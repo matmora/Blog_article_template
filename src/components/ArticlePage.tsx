@@ -5,12 +5,11 @@ import { AuthorBio } from "./AuthorBio";
 import { PullQuote } from "./PullQuote";
 import { TipBox } from "./TipBox";
 import { NewsletterCTA } from "./NewsletterCTA";
-
 export const ArticlePage = () => {
   useEffect(() => {
     // Update document title and meta tags for SEO
     document.title = "How to Find the Best Content Creators in London? | Complete Guide 2024";
-    
+
     // Create or update meta tags
     const updateMetaTag = (name: string, content: string, property?: boolean) => {
       const attributeName = property ? 'property' : 'name';
@@ -27,20 +26,20 @@ export const ArticlePage = () => {
     updateMetaTag('description', 'Discover how to find the best content creators in London. Learn to identify mobile-first vs professional creators, evaluate reach, and find the perfect match for your brand in 2024.');
     updateMetaTag('keywords', 'content creators London, top influencers London, hire content creators UK, best TikTok creators London, UGC creators UK, London video content creators, influencer marketing London');
     updateMetaTag('author', 'Sarah Johnson');
-    
+
     // Open Graph meta tags
     updateMetaTag('og:title', 'How to Find the Best Content Creators in London? Complete Guide 2024', true);
     updateMetaTag('og:description', 'Your complete guide to finding and hiring the best content creators in London. From mobile-first creators to professional videographers - discover what works for your brand.', true);
     updateMetaTag('og:type', 'article', true);
     updateMetaTag('og:url', 'https://yoursite.com/best-content-creators-london', true);
     updateMetaTag('og:image', 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1200&h=630&fit=crop', true);
-    
+
     // Twitter Card meta tags
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', 'How to Find the Best Content Creators in London? Complete Guide 2024');
     updateMetaTag('twitter:description', 'Your complete guide to finding and hiring the best content creators in London for maximum brand impact.');
     updateMetaTag('twitter:image', 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1200&h=630&fit=crop');
-    
+
     // Article structured data
     const structuredData = {
       "@context": "https://schema.org",
@@ -55,7 +54,6 @@ export const ArticlePage = () => {
       "image": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1200&h=630&fit=crop",
       "description": "Discover how to find the best content creators in London. Learn to identify mobile-first vs professional creators, evaluate reach, and find the perfect match for your brand."
     };
-    
     let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
     if (!script) {
       script = document.createElement('script');
@@ -64,24 +62,21 @@ export const ArticlePage = () => {
     }
     script.textContent = JSON.stringify(structuredData);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
-  return (
-    <article className="min-h-screen bg-background">
+  return <article className="min-h-screen bg-background">
       {/* Hero Section */}
       <header className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1600&h=900&fit=crop')"
-          }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1600&h=900&fit=crop')"
+      }}>
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
@@ -110,11 +105,7 @@ export const ArticlePage = () => {
           </p>
           
           <div className="flex items-center justify-center gap-3 mt-8">
-            <img 
-              src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face" 
-              alt="Sarah Johnson, Content Marketing Expert"
-              className="w-12 h-12 rounded-full border-2 border-white/30"
-            />
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face" alt="Sarah Johnson, Content Marketing Expert" className="w-12 h-12 rounded-full border-2 border-white/30" />
             <div className="text-left">
               <div className="font-semibold">Sarah Johnson</div>
               <div className="text-sm opacity-75">Content Marketing Expert</div>
@@ -140,10 +131,7 @@ export const ArticlePage = () => {
                 London's creator economy is booming, with thousands of talented content creators across every niche imaginable. But here's the challenge: not every creator is the right fit for your brand. The difference between a successful campaign and a missed opportunity often comes down to understanding the nuances of creator selection.
               </p>
               
-              <TipBox 
-                title="Success Metric"
-                content="Brands that carefully match creator styles to their campaign goals see 3x higher engagement rates compared to those who focus solely on follower count."
-              />
+              <TipBox title="Success Metric" content="Brands that carefully match creator styles to their campaign goals see 3x higher engagement rates compared to those who focus solely on follower count." />
               
               <p className="text-lg leading-relaxed mt-6 text-muted-foreground">
                 Whether you're a startup looking for authentic user-generated content or an established brand seeking premium visual storytelling, this guide will help you navigate London's diverse creator landscape and find your perfect match.
@@ -155,11 +143,7 @@ export const ArticlePage = () => {
               <h2 className="text-3xl font-bold mb-6 text-foreground">Understanding the Two Main Types of Content Creators</h2>
               
               <div className="mb-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop" 
-                  alt="Content creator using mobile phone to create authentic social media content in London"
-                  className="w-full rounded-xl shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop" alt="Content creator using mobile phone to create authentic social media content in London" className="w-full rounded-xl shadow-lg" />
                 <caption className="text-sm text-muted-foreground mt-2 block text-center italic">
                   The creator landscape spans from mobile-first authenticity to professional production values.
                 </caption>
@@ -197,10 +181,7 @@ export const ArticlePage = () => {
                 </div>
               </div>
 
-              <PullQuote 
-                quote="The key is matching creator style to campaign intent. Authentic moments require mobile-first creators, while brand prestige calls for professional production."
-                author="Marketing Director at London Creative Agency"
-              />
+              <PullQuote quote="The key is matching creator style to campaign intent. Authentic moments require mobile-first creators, while brand prestige calls for professional production." author="Marketing Director at London Creative Agency" />
             </section>
 
             {/* Video Content Power */}
@@ -234,10 +215,7 @@ export const ArticlePage = () => {
                 Different platforms require different video approaches. Top London creators understand these nuances and adapt their content accordingly. When evaluating creators, prioritize those who demonstrate strong video skills across multiple platforms.
               </p>
 
-              <TipBox 
-                title="Creator Evaluation Tip"
-                content="Look for creators who post video content at least 70% of the time and show consistent engagement across TikTok, Reels, and YouTube Shorts."
-              />
+              <TipBox title="Creator Evaluation Tip" content="Look for creators who post video content at least 70% of the time and show consistent engagement across TikTok, Reels, and YouTube Shorts." />
             </section>
 
             {/* Evaluating Creator Reach */}
@@ -269,9 +247,9 @@ export const ArticlePage = () => {
                       <td className="border border-border p-4 text-green-600">{'>'} 10% of followers</td>
                     </tr>
                     <tr>
-                      <td className="border border-border p-4 font-medium">Comments Quality</td>
-                      <td className="border border-border p-4">Indicates genuine engagement</td>
-                      <td className="border border-border p-4 text-green-600">Meaningful responses</td>
+                      <td className="border border-border p-4 font-medium">Viral Videos</td>
+                      <td className="border border-border p-4">Indicates experience going viral</td>
+                      <td className="border border-border p-4 text-green-600">>1 viral videos</td>
                     </tr>
                     <tr>
                       <td className="border border-border p-4 font-medium">Story Views</td>
@@ -287,10 +265,7 @@ export const ArticlePage = () => {
                 </table>
               </div>
 
-              <PullQuote 
-                quote="We've seen creators with 50K followers outperform those with 500K simply because their audience was more engaged and relevant to our target market."
-                author="Brand Manager at London Fashion Brand"
-              />
+              <PullQuote quote="We've seen creators with 50K followers outperform those with 500K simply because their audience was more engaged and relevant to our target market." author="Brand Manager at London Fashion Brand" />
             </section>
 
             {/* Different Creator Types */}
@@ -363,10 +338,7 @@ export const ArticlePage = () => {
                 </div>
               </div>
 
-              <TipBox 
-                title="Matching Strategy"
-                content="The best creator partnerships happen when the creator's natural content style aligns with your brand values. Force-fitting rarely works well."
-              />
+              <TipBox title="Matching Strategy" content="The best creator partnerships happen when the creator's natural content style aligns with your brand values. Force-fitting rarely works well." />
             </section>
 
             {/* AI-Enhanced Creators */}
@@ -374,11 +346,7 @@ export const ArticlePage = () => {
               <h2 className="text-3xl font-bold mb-6 text-foreground">The Rise of AI-Enhanced Creators: The Future is Here</h2>
               
               <div className="mb-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" 
-                  alt="AI technology and content creation tools representing the future of digital marketing"
-                  className="w-full rounded-xl shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="AI technology and content creation tools representing the future of digital marketing" className="w-full rounded-xl shadow-lg" />
                 <caption className="text-sm text-muted-foreground mt-2 block text-center italic">
                   AI-enhanced creators are revolutionizing content production with unprecedented efficiency and creativity.
                 </caption>
@@ -416,10 +384,7 @@ export const ArticlePage = () => {
                 </div>
               </div>
 
-              <PullQuote 
-                quote="AI-enhanced creators deliver 300% more content variations in half the time, making them incredibly valuable for brands needing consistent, high-volume content."
-                author="Head of Digital at London Marketing Agency"
-              />
+              <PullQuote quote="AI-enhanced creators deliver 300% more content variations in half the time, making them incredibly valuable for brands needing consistent, high-volume content." author="Head of Digital at London Marketing Agency" />
 
               <h3 className="text-2xl font-semibold mb-4 text-foreground">Why AI-Enhanced Creators Matter for Brands</h3>
               <div className="bg-muted/50 p-6 rounded-xl my-6 border-l-4 border-primary">
@@ -445,10 +410,7 @@ export const ArticlePage = () => {
                 Remember: the best creator partnerships are built on shared values, audience alignment, and mutual respect for each other's expertise. Take time to research, engage, and build relationships rather than rushing into one-off campaigns.
               </p>
 
-              <TipBox 
-                title="Final Success Tip"
-                content="Start with micro-campaigns to test creator fit before committing to larger partnerships. This approach minimizes risk while maximizing learning opportunities."
-              />
+              <TipBox title="Final Success Tip" content="Start with micro-campaigns to test creator fit before committing to larger partnerships. This approach minimizes risk while maximizing learning opportunities." />
 
               {/* Call to Action Section */}
               <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-secondary/10 rounded-2xl p-8 md:p-12 my-12 border text-center">
@@ -480,6 +442,5 @@ export const ArticlePage = () => {
           </main>
         </div>
       </div>
-    </article>
-  );
+    </article>;
 };
