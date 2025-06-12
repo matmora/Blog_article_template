@@ -27,12 +27,12 @@ export const NewsletterCTA = () => {
           </div>
           
           <h3 className="text-3xl font-bold mb-4 text-foreground">
-            Stay Updated with the Latest in Web Development
+            Stay Updated with Creator Economy Insights
           </h3>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Get weekly insights, tutorials, and industry trends delivered straight to your inbox. 
-            Join over 10,000 developers who trust our content to stay ahead of the curve.
+            Get weekly insights about London's top content creators, emerging trends, and successful 
+            campaign strategies. Join over 5,000 marketers and brand managers who trust our insider knowledge.
           </p>
         </div>
 
@@ -59,28 +59,28 @@ export const NewsletterCTA = () => {
         )}
 
         <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-          <span>✓ Weekly development insights</span>
+          <span>✓ Weekly creator spotlights</span>
+          <span>✓ Campaign case studies</span>
           <span>✓ No spam, unsubscribe anytime</span>
-          <span>✓ Free resources & tutorials</span>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50">
-          <h4 className="font-semibold mb-4 text-foreground">Related Articles</h4>
+          <h4 className="font-semibold mb-4 text-foreground">Related Creator Guides</h4>
           <div className="grid md:grid-cols-2 gap-4 text-left">
             <a href="#" className="group block p-4 rounded-lg bg-background/50 hover:bg-background border transition-colors">
               <h5 className="font-medium text-foreground group-hover:text-primary transition-colors">
-                Building Scalable React Applications
+                TikTok Creator Pricing Guide London 2024
               </h5>
               <p className="text-sm text-muted-foreground mt-1">
-                Learn best practices for structuring large React projects
+                Complete breakdown of creator rates and negotiation tips
               </p>
             </a>
             <a href="#" className="group block p-4 rounded-lg bg-background/50 hover:bg-background border transition-colors">
               <h5 className="font-medium text-foreground group-hover:text-primary transition-colors">
-                The Complete Guide to Web Performance
+                Instagram Reels vs TikTok: Creator Platform Analysis
               </h5>
               <p className="text-sm text-muted-foreground mt-1">
-                Optimize your website for speed and user experience
+                Which platform delivers better ROI for your campaigns
               </p>
             </a>
           </div>

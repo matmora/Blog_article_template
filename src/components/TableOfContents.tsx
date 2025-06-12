@@ -1,77 +1,82 @@
 
 import { useState, useEffect } from "react";
-import { List } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 interface TableOfContentsProps {
   onSectionClick: (sectionId: string) => void;
 }
 
 export const TableOfContents = ({ onSectionClick }: TableOfContentsProps) => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState<string>("");
 
   const sections = [
-    { id: "introduction", title: "Introduction" },
-    { id: "ai-tools", title: "AI-Powered Tools" },
-    { id: "frameworks", title: "Modern Frameworks" },
-    { id: "performance", title: "Performance Optimization" },
-    { id: "future", title: "Future Predictions" },
-    { id: "conclusion", title: "Conclusion" },
+    { id: "introduction", title: "Why Finding the Right Creator Matters", level: 1 },
+    { id: "creator-types", title: "Two Main Types of Content Creators", level: 1 },
+    { id: "video-content", title: "The Power of Video Content", level: 1 },
+    { id: "evaluating-reach", title: "Evaluating Creator's Real Reach", level: 1 },
+    { id: "creator-categories", title: "Different Creator Categories", level: 1 },
+    { id: "ai-creators", title: "AI-Enhanced Creators", level: 1 },
+    { id: "conclusion", title: "Finding Your Perfect Match", level: 1 },
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
-      
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i].id);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i].id);
-          break;
-        }
-      }
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "-20% 0px -35% 0px" }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call once to set initial state
-    
-    return () => window.removeEventListener("scroll", handleScroll);
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="sticky top-8">
       <div className="bg-card border rounded-xl p-6 shadow-sm">
-        <div className="flex items-center gap-2 mb-4">
-          <List className="w-5 h-5 text-primary" />
-          <h3 className="font-semibold text-foreground">Table of Contents</h3>
-        </div>
-        
-        <nav>
-          <ul className="space-y-3">
-            {sections.map((section) => (
-              <li key={section.id}>
-                <button
-                  onClick={() => onSectionClick(section.id)}
-                  className={`text-left text-sm transition-colors hover:text-primary block w-full py-1 border-l-2 pl-3 ${
-                    activeSection === section.id
-                      ? "border-primary text-primary font-medium"
-                      : "border-transparent text-muted-foreground"
-                  }`}
-                >
-                  {section.title}
-                </button>
-              </li>
-            ))}
-          </ul>
+        <h3 className="font-semibold text-lg mb-4 text-foreground">Table of Contents</h3>
+        <nav className="space-y-2">
+          {sections.map(({ id, title, level }) => (
+            <button
+              key={id}
+              onClick={() => onSectionClick(id)}
+              className={`w-full text-left p-2 rounded-lg transition-all duration-200 flex items-center group ${
+                activeSection === id
+                  ? "bg-primary/10 text-primary border-l-2 border-primary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+              } ${level === 2 ? "ml-4 text-sm" : ""}`}
+            >
+              <ChevronRight 
+                className={`w-4 h-4 mr-2 transition-transform ${
+                  activeSection === id ? "rotate-90" : "group-hover:translate-x-1"
+                }`} 
+              />
+              <span className="text-sm leading-relaxed">{title}</span>
+            </button>
+          ))}
         </nav>
         
         <div className="mt-6 pt-6 border-t border-border">
-          <div className="text-xs text-muted-foreground">
-            <div className="flex items-center justify-between mb-2">
-              <span>Reading Progress</span>
-              <span>8 min read</span>
+          <div className="text-xs text-muted-foreground space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>12 min read</span>
             </div>
-            <div className="w-full bg-muted rounded-full h-2">
-              <div className="bg-primary h-2 rounded-full w-1/3 transition-all duration-300"></div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span>Content Creator Guide</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <span>Updated June 2024</span>
             </div>
           </div>
         </div>
