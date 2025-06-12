@@ -84,7 +84,7 @@ export const ArticlePage = () => {
           <div className="flex items-center justify-center gap-4 mb-6 text-sm opacity-90">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>June 12, 2024</span>
+              <span>June 12, 2025</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
@@ -107,7 +107,7 @@ export const ArticlePage = () => {
           <div className="flex items-center justify-center gap-3 mt-8">
             <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face" alt="Sarah Johnson, Content Marketing Expert" className="w-12 h-12 rounded-full border-2 border-white/30" />
             <div className="text-left">
-              <div className="font-semibold">Sarah Johnson</div>
+              <div className="font-semibold">Mat Mora</div>
               <div className="text-sm opacity-75">Content Marketing Expert</div>
             </div>
           </div>
@@ -188,9 +188,7 @@ export const ArticlePage = () => {
             <section id="video-content" className="mb-16">
               <h2 className="text-3xl font-bold mb-6 text-foreground">The Undeniable Power of Video Content</h2>
               
-              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                In 2024, video isn't just king—it's the entire kingdom. TikTok, Instagram Reels, and YouTube Shorts have fundamentally shifted how audiences consume content, making video skills non-negotiable for successful creators.
-              </p>
+              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">In 2025, video isn't just king—it's the entire kingdom. TikTok, Instagram Reels, and YouTube Shorts have fundamentally shifted how audiences consume content, making video skills non-negotiable for successful creators.</p>
 
               <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20 p-8 rounded-xl border border-red-200 dark:border-red-800 my-8">
                 <h3 className="text-xl font-semibold mb-4 text-red-800 dark:text-red-200">Video Performance Statistics</h3>
@@ -224,9 +222,7 @@ export const ArticlePage = () => {
               
               <div className="bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6 mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-yellow-800 dark:text-yellow-200">⚠️ The Follower Count Trap</h3>
-                <p className="text-yellow-700 dark:text-yellow-300">
-                  Follower counts can be misleading. Likes can be purchased for as little as £10 per thousand. Instead, focus on metrics that indicate genuine engagement and reach.
-                </p>
+                <p className="text-yellow-700 dark:text-yellow-300">Follower counts can be misleading. Followers can be purchased for as little as £10 per thousand. Instead, focus on metrics that indicate genuine engagement and reach.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-foreground">Key Metrics to Analyze</h3>
@@ -257,9 +253,9 @@ export const ArticlePage = () => {
                       <td className="border border-border p-4 text-green-600">{'>'} 15% of followers</td>
                     </tr>
                     <tr>
-                      <td className="border border-border p-4 font-medium">Save Rate</td>
-                      <td className="border border-border p-4">Content value and memorability</td>
-                      <td className="border border-border p-4 text-green-600">{'>'} 5% on posts</td>
+                      
+                      
+                      
                     </tr>
                   </tbody>
                 </table>
@@ -362,7 +358,7 @@ export const ArticlePage = () => {
                 <div className="space-y-4">
                   <div className="bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-950/20 dark:to-blue-950/20 p-4 rounded-lg border border-cyan-200 dark:border-cyan-800">
                     <h4 className="font-semibold text-cyan-800 dark:text-cyan-200 mb-2">🎬 AI Video Editing</h4>
-                    <p className="text-sm text-cyan-700 dark:text-cyan-300">Automated cutting, color correction, and effects that reduce editing time by 80%</p>
+                    <p className="text-sm text-cyan-700 dark:text-cyan-300">Hollywood quality colour grading, special effects &amp; Ad campaign optimised videos.</p>
                   </div>
                   
                   <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800">
