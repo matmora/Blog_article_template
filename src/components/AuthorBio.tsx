@@ -5,8 +5,8 @@ export const AuthorBio = () => {
         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=120&h=120&fit=crop&crop=face" alt="Sarah Johnson, Content Marketing Expert and Creator Economy Specialist" className="w-20 h-20 rounded-full border-4 border-background shadow-lg flex-shrink-0" />
         
         <div className="flex-1">
-          <h3 className="text-2xl font-bold mb-2 text-foreground">Mat Mora</h3>
-          <p className="text-primary font-medium mb-3">Content Marketing Expert & Creator Economy Specialist</p>
+          
+          
           
           <p className="text-muted-foreground leading-relaxed mb-4">Mat has been at the forefront of London's creator economy for over 6 years, helping brands connect with top influencers and content creators. He specializes in creator partnerships, influencer marketing strategy, and emerging trends in social media. Mat has worked with over 200 London-based creators and helped brands achieve an average 400% ROI on creator campaigns.</p>
           
