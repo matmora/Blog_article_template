@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Clock, User, Calendar, Tag } from "lucide-react";
 import { TableOfContents } from "./TableOfContents";
@@ -13,15 +12,12 @@ export const ArticlePage = () => {
     document.title = "How to Find the Best Content Creators in London? | Complete Guide 2024";
     
     // Create or update meta tags
-    const updateMetaTag = (name: string, content: string, property?: string) => {
-      let meta = document.querySelector(`meta[${property ? 'property' : 'name'}="${name}"]`);
+    const updateMetaTag = (name: string, content: string, property?: boolean) => {
+      const attributeName = property ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attributeName}="${name}"]`);
       if (!meta) {
         meta = document.createElement('meta');
-        if (property) {
-          meta.setAttribute('property', name);
-        } else {
-          meta.setAttribute('name', name);
-        }
+        meta.setAttribute(attributeName, name);
         document.head.appendChild(meta);
       }
       meta.setAttribute('content', content);
@@ -60,7 +56,7 @@ export const ArticlePage = () => {
       "description": "Discover how to find the best content creators in London. Learn to identify mobile-first vs professional creators, evaluate reach, and find the perfect match for your brand."
     };
     
-    let script = document.querySelector('script[type="application/ld+json"]');
+    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
     if (!script) {
       script = document.createElement('script');
       script.type = 'application/ld+json';
