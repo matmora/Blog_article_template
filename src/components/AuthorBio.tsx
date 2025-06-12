@@ -12,8 +12,8 @@ export const AuthorBio = () => {
           
           <div className="flex gap-4">
             <a href="https://github.com/sarahjohnson" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Sarah Johnson's GitHub profile">
-              <Github className="w-5 h-5" />
-              <span className="text-sm">GitHub</span>
+              
+              
             </a>
             <a href="https://linkedin.com/in/sarahjohnsonmarketing" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Sarah Johnson's LinkedIn profile">
               <Linkedin className="w-5 h-5" />
